@@ -6,6 +6,9 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Ghani Ramadhani | Industrial IoT Developer Portfolio',
   description: 'Official portfolio of Ghani Trie Aqeela Ramadhani. Computer Engineering graduate from IPB University and Industrial IoT Developer specializing in PTC ThingWorx, Laravel, and Embedded Systems.',
+  verification: {
+    google: 'google-site-verification: google07ee7f8b10d251a8.html',
+  },
   keywords: [
     'Ghani Ramadhani', 
     'Ghani Trie Aqeela Ramadhani', 
