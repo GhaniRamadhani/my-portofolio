@@ -1,5 +1,27 @@
 import React from 'react';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+
+export const metadata: Metadata = {
+  title: 'Ghani Ramadhani | Industrial IoT Developer Portfolio',
+  description: 'Official portfolio of Ghani Trie Aqeela Ramadhani. Computer Engineering graduate from IPB University and Industrial IoT Developer specializing in PTC ThingWorx, Laravel, and Embedded Systems.',
+  keywords: [
+    'Ghani Ramadhani', 
+    'Ghani Trie Aqeela Ramadhani', 
+    'Ghani Trie Aqeela Ramadhani IPB', 
+    'IoT Developer Intern', 
+    'Portofolio Ghani Ramadhani'
+  ],
+  authors: [{ name: 'Ghani Trie Aqeela Ramadhani' }],
+  openGraph: {
+    title: 'Ghani Ramadhani | Industrial IoT Portfolio',
+    description: 'Explore industrial monitoring solutions, full-stack dashboards, and IoT architectures built by Ghani Ramadhani.',
+    url: 'https://ghani-portfolio.vercel.app', // Ganti dengan domain custom Anda jika sudah diubah
+    siteName: 'Ghani Ramadhani Portfolio',
+    type: 'profile',
+  },
+};
 
 export default function PortfolioPage() {
   return (
@@ -21,7 +43,6 @@ export default function PortfolioPage() {
           <span className="font-extrabold text-xl tracking-tighter text-blue-600 uppercase">
             Ghani Ramadhani <span className="text-black text-md ml-2 font-black">| PORTFOLIO</span>
           </span>
-          {/* Menambahkan menu menu 'Activities' di sini */}
           <div className="hidden md:flex gap-8 text-xs font-bold text-slate-900 uppercase tracking-widest">
             <a href="#home" className="hover:text-blue-600 transition">Home</a>
             <a href="#experience" className="hover:text-blue-600 transition">Experience</a>
@@ -128,7 +149,7 @@ export default function PortfolioPage() {
               </div>
               <div className="p-8 flex flex-col flex-grow">
                 <h3 className="text-xl font-black uppercase leading-tight min-h-[3rem] text-white group-hover:text-blue-400 transition-colors">IoT Gas Leak Detection</h3>
-                <p className="text-[11px] text-slate-400 font-bold uppercase mt-2 mb-6 line-clamp-3 leading-relaxed">
+                <p className="text-[11px] text-slate-400 font-bold uppercase mt-2 mb-4 line-clamp-3 leading-relaxed">
                   Development of IoT-Based Gas Leak Detection with MQ-6 Sensor and Telegram Notification for Security
                 </p>
                 <div className="mt-auto space-y-6">
@@ -148,7 +169,7 @@ export default function PortfolioPage() {
               </div>
               <div className="p-8 flex flex-col flex-grow">
                 <h3 className="text-xl font-black uppercase leading-tight min-h-[3rem] text-white group-hover:text-blue-400 transition-colors">SIMONAIR 3.0 – Water Quality</h3>
-                <p className="text-[11px] text-slate-400 font-bold uppercase mt-2 mb-6 line-clamp-3 leading-relaxed">
+                <p className="text-[11px] text-slate-400 font-bold uppercase mt-2 mb-4 line-clamp-3 leading-relaxed">
                   IoT Based Multi-monitoring water quality for Red Tilapia, Silver Arowana, and Discus Fish Species
                 </p>
                 <div className="mt-auto space-y-6">
@@ -168,7 +189,7 @@ export default function PortfolioPage() {
               </div>
               <div className="p-8 flex flex-col flex-grow">
                 <h3 className="text-xl font-black uppercase leading-tight min-h-[3rem] text-white group-hover:text-blue-400 transition-colors">Automatic Lighting & Voice</h3>
-                <p className="text-[11px] text-slate-400 font-bold uppercase mt-2 mb-6 line-clamp-3 leading-relaxed">
+                <p className="text-[11px] text-slate-400 font-bold uppercase mt-2 mb-4 line-clamp-3 leading-relaxed">
                   Voice Recording and Motion-Based Automatic Lighting Solution for Curug Cikoneng Hospitality
                 </p>
                 <div className="mt-auto space-y-6">
@@ -184,7 +205,7 @@ export default function PortfolioPage() {
         </div>
       </section>
       
-      {/* --- PUBLICATION SECTION --- */}
+      {/* --- PUBLICATIONS SECTION --- */}
       <section id="publications" className="py-12 bg-white border-b border-slate-100">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center justify-between mb-8">
@@ -313,25 +334,18 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-{/* --- BAGIAN BARU: RECENT ACTIVITIES (LICENSES & COURSES) --- */}
+      {/* --- ACTIVITIES SECTION --- */}
       <section id="activities" className="py-8 bg-white border-b border-slate-100">
         <div className="max-w-6xl mx-auto px-6">
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl font-black uppercase tracking-tighter">Recent Activities</h2>
             <div className="h-[2px] flex-1 bg-slate-100 ml-4"></div>
           </div>
-
           <div className="grid grid-cols-1 md:grid-cols-1 gap-4">
-            
-            {/* Aktivitas 1: Kredensial/License (Hyperlink) */}
-            <a 
-              href="https://www.linkedin.com/learning/certificates/7c2ce87402a8b53d92abee369d6bc809ceffc1e5a19b7c855d202e3c98f74f21" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="group p-6 bg-slate-50 rounded-3xl border border-transparent hover:border-blue-600 hover:bg-white transition-all duration-300 flex items-start gap-4 block"
-            >
+            <a href="https://www.linkedin.com/learning/certificates/7c2ce87402a8b53d92abee369d6bc809ceffc1e5a19b7c855d202e3c98f74f21" target="_blank" rel="noopener noreferrer" className="group p-6 bg-slate-50 rounded-3xl border border-transparent hover:border-blue-600 hover:bg-white transition-all duration-300 flex items-start gap-4">
               <div className="p-3 bg-blue-50 text-blue-600 rounded-2xl group-hover:bg-blue-600 group-hover:text-white transition-colors flex-shrink-0 flex items-center justify-center w-12 h-12">
-                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet" fill="#FFFFFF" stroke="#155dfc"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M0 0h256v256H0V0z" fill="#155dfc"></path><path d="M67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371 7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259-19.245 0-30.416-9.967-36.087-21.996M152.381 211.354l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607 9.969 0 16.325-4.984 16.325-11.858 0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257 0-18.044 13.747-31.792 35.228-31.792 15.294 0 26.292 5.328 34.196 19.247L210.29 147.43c-4.125-7.389-8.591-10.31-15.465-10.31-7.046 0-11.514 4.468-11.514 10.31 0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804 0 21.654-17.012 33.51-39.867 33.51-22.339 0-36.774-10.654-43.819-24.574"></path></g></svg>              </div>
+                <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="#FFFFFF" stroke="#155dfc"><path d="M0 0h256v256H0V0z" fill="#155dfc"></path><path d="M67.312 213.932l19.59-11.856c3.78 6.701 7.218 12.371 15.465 12.371 7.905 0 12.89-3.092 12.89-15.12v-81.798h24.057v82.138c0 24.917-14.606 36.259-35.916 36.259-19.245 0-30.416-9.967-36.087-21.996M152.381 211.354l19.588-11.341c5.157 8.421 11.859 14.607 23.715 14.607 9.969 0 16.325-4.984 16.325-11.858 0-8.248-6.53-11.17-17.528-15.98l-6.013-2.58c-17.357-7.387-28.87-16.667-28.87-36.257 0-18.044 13.747-31.792 35.228-31.792 15.294 0 26.292 5.328 34.196 19.247L210.29 147.43c-4.125-7.389-8.591-10.31-15.465-10.31-7.046 0-11.514 4.468-11.514 10.31 0 7.217 4.468 10.14 14.778 14.608l6.014 2.577c20.45 8.765 31.963 17.7 31.963 37.804 0 21.654-17.012 33.51-39.867 33.51-22.339 0-36.774-10.654-43.819-24.574"></path></svg>
+              </div>
               <div className="flex-1 space-y-1">
                 <span className="text-[10px] font-black tracking-widest text-blue-600 uppercase italic">License</span>
                 <h3 className="text-md font-black uppercase tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">Learning the JavaScript Language</h3>
@@ -342,19 +356,9 @@ export default function PortfolioPage() {
                 </div>
               </div>
             </a>
-
-            {/* Aktivitas 2: Kredensial/License (Hyperlink) */}
-            <a 
-              href="https://www.linkedin.com/learning/certificates/55e779a01ec2e61aa3a9ecf42a9f73865f7e9f44da12cbab8d2d07a9a7bf6008" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="group p-6 bg-slate-50 rounded-3xl border border-transparent hover:border-blue-600 hover:bg-white transition-all duration-300 flex items-start gap-4 block"
-            >
+            <a href="https://www.linkedin.com/learning/certificates/55e779a01ec2e61aa3a9ecf42a9f73865f7e9f44da12cbab8d2d07a9a7bf6008" target="_blank" rel="noopener noreferrer" className="group p-6 bg-slate-50 rounded-3xl border border-transparent hover:border-blue-600 hover:bg-white transition-all duration-300 flex items-start gap-4">
               <div className="p-3 bg-blue-50 text-blue-600 rounded-2xl group-hover:bg-blue-600 group-hover:text-white transition-colors flex-shrink-0">
-                <svg width="30px" height="30px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M30 16C30 23.728 23.735 30 16 30C8.265 30 2 23.728 2 16C2 8.265 8.265 2 16 2C23.735 2 30 8.265 30 16Z" fill="#155dfc"/>
-                <path d="M6.82154 14.1563C5.81185 14.1563 5 14.9865 5 16.0035C5 17.0205 5.81867 17.8507 6.82154 17.8507C7.82442 17.8507 8.64309 17.0205 8.64309 16.0035C8.64309 14.9795 7.82442 14.1563 6.82154 14.1563ZM19.8316 22.5482C18.9583 23.0602 18.665 24.1879 19.163 25.0734C19.6679 25.959 20.7799 26.2634 21.6531 25.7514C22.5264 25.2395 22.8197 24.1118 22.3217 23.2262C21.8101 22.3476 20.698 22.0432 19.8316 22.5482ZM10.7785 16.0035C10.7785 14.177 11.6722 12.565 13.0434 11.5896L11.7131 9.32725C10.1167 10.4065 8.93645 12.06 8.43842 13.9902C9.01149 14.4676 9.37989 15.194 9.37989 16.0035C9.37989 16.8129 9.01149 17.5393 8.43842 18.0167C8.92962 19.9469 10.1167 21.6004 11.7131 22.6797L13.0434 20.4174C11.6722 19.4419 10.7785 17.8299 10.7785 16.0035ZM16.0998 10.6071C18.8833 10.6071 21.1619 12.7657 21.4007 15.5261L24 15.4846C23.8704 13.4506 22.9971 11.6241 21.6463 10.282C20.9504 10.5449 20.1522 10.5034 19.4632 10.1021C18.7673 9.69393 18.3375 9.01593 18.2147 8.26875C17.5393 8.08195 16.8298 7.97817 16.0998 7.97817C14.8377 7.97817 13.6506 8.27566 12.5932 8.80838L13.8621 11.1053C14.5375 10.787 15.3016 10.6071 16.0998 10.6071ZM16.0998 21.3998C15.3016 21.3998 14.5375 21.2199 13.8553 20.9017L12.5864 23.1985C13.6438 23.7313 14.8377 24.0287 16.093 24.0287C16.823 24.0287 17.5325 23.925 18.2079 23.7382C18.3239 22.9979 18.7605 22.313 19.4564 21.9048C20.1454 21.4966 20.9504 21.462 21.6395 21.7249C22.9835 20.3828 23.8636 18.5563 23.9932 16.5223L21.3939 16.4808C21.1619 19.2343 18.8833 21.3998 16.0998 21.3998ZM19.8248 9.45178C20.698 9.96374 21.8101 9.65933 22.3149 8.77378C22.8197 7.88824 22.5196 6.76054 21.6463 6.24859C20.7731 5.73663 19.661 6.04104 19.1562 6.92659C18.6582 7.81213 18.9583 8.93983 19.8248 9.45178Z" fill="white"/>
-                </svg>
+                <svg width="30px" height="30px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 16C30 23.728 23.735 30 16 30C8.265 30 2 23.728 2 16C2 8.265 8.265 2 16 2C23.735 2 30 8.265 30 16Z" fill="#155dfc"/><path d="M6.82154 14.1563C5.81185 14.1563 5 14.9865 5 16.0035C5 17.0205 5.81867 17.8507 6.82154 17.8507C7.82442 17.8507 8.64309 17.0205 8.64309 16.0035C8.64309 14.9795 7.82442 14.1563 6.82154 14.1563ZM10.7785 16.0035C10.7785 14.177 11.6722 12.565 13.0434 11.5896L11.7131 9.32725C10.1167 10.4065 8.93645 12.06 8.43842 13.9902C9.01149 14.4676 9.37989 15.194 9.37989 16.0035C9.37989 16.8129 9.01149 17.5393 8.43842 18.0167C8.92962 19.9469 10.1167 21.6004 11.7131 22.6797L13.0434 20.4174C11.6722 19.4419 10.7785 17.8299 10.7785 16.0035ZM16.0998 10.6071C18.8833 10.6071 21.1619 12.7657 21.4007 15.5261L24 15.4846C23.8704 13.4506 22.9971 11.6241 21.6463 10.282C20.9504 10.5449 20.1522 10.5034 19.4632 10.1021C18.7673 9.69393 18.3375 9.01593 18.2147 8.26875C17.5393 8.08195 16.8298 7.97817 16.0998 7.97817C14.8377 7.97817 13.6506 8.27566 12.5932 8.80838L13.8621 11.1053C14.5375 10.787 15.3016 10.6071 16.0998 10.6071ZM16.0998 21.3998C15.3016 21.3998 14.5375 21.2199 13.8553 20.9017L12.5864 23.1985C13.6438 23.7313 14.8377 24.0287 16.093 24.0287C16.823 24.0287 17.5325 23.925 18.2079 23.7382C18.3239 22.9979 18.7605 22.313 19.4564 21.9048C20.1454 21.4966 20.9504 21.462 21.6395 21.7249C22.9835 20.3828 23.8636 18.5563 23.9932 16.5223L21.3939 16.4808C21.1619 19.2343 18.8833 21.3998 16.0998 21.3998ZM19.8248 9.45178C20.698 9.96374 21.8101 9.65933 22.3149 8.77378C22.8197 7.88824 22.5196 6.76054 21.6463 6.24859C20.7731 5.73663 19.661 6.04104 19.1562 6.92659C18.6582 7.81213 18.9583 8.93983 19.8248 9.45178ZM19.8316 22.5482C18.9583 23.0602 18.665 24.1879 19.163 25.0734C19.6679 25.959 20.7799 26.2634 21.6531 25.7514C22.5264 25.2395 22.8197 24.1118 22.3217 23.2262C21.8101 22.3476 20.698 22.0432 19.8316 22.5482Z" fill="white"/></svg>
               </div>
               <div className="flex-1 space-y-1">
                 <span className="text-[10px] font-black tracking-widest text-blue-600 uppercase italic">License</span>
@@ -366,19 +370,9 @@ export default function PortfolioPage() {
                 </div>
               </div>
             </a>
-
-            {/* Aktivitas 3: Kredensial/License (Hyperlink) */}
-            <a 
-              href="https://www.linkedin.com/learning/certificates/4a7aa25e487073f689d3fea4352a6a996d28c9c0b2261b8cbdc6f85c47238d40" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="group p-6 bg-slate-50 rounded-3xl border border-transparent hover:border-blue-600 hover:bg-white transition-all duration-300 flex items-start gap-4 block"
-            >
+            <a href="https://www.linkedin.com/learning/certificates/4a7aa25e487073f689d3fea4352a6a996d28c9c0b2261b8cbdc6f85c47238d40" target="_blank" rel="noopener noreferrer" className="group p-6 bg-slate-50 rounded-3xl border border-transparent hover:border-blue-600 hover:bg-white transition-all duration-300 flex items-start gap-4">
               <div className="p-3 bg-blue-50 text-blue-600 rounded-2xl group-hover:bg-blue-600 group-hover:text-white transition-colors flex-shrink-0">
-                <svg width="30px" height="30px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M30 16C30 23.728 23.735 30 16 30C8.265 30 2 23.728 2 16C2 8.265 8.265 2 16 2C23.735 2 30 8.265 30 16Z" fill="#155dfc"/>
-                <path d="M6.82154 14.1563C5.81185 14.1563 5 14.9865 5 16.0035C5 17.0205 5.81867 17.8507 6.82154 17.8507C7.82442 17.8507 8.64309 17.0205 8.64309 16.0035C8.64309 14.9795 7.82442 14.1563 6.82154 14.1563ZM19.8316 22.5482C18.9583 23.0602 18.665 24.1879 19.163 25.0734C19.6679 25.959 20.7799 26.2634 21.6531 25.7514C22.5264 25.2395 22.8197 24.1118 22.3217 23.2262C21.8101 22.3476 20.698 22.0432 19.8316 22.5482ZM10.7785 16.0035C10.7785 14.177 11.6722 12.565 13.0434 11.5896L11.7131 9.32725C10.1167 10.4065 8.93645 12.06 8.43842 13.9902C9.01149 14.4676 9.37989 15.194 9.37989 16.0035C9.37989 16.8129 9.01149 17.5393 8.43842 18.0167C8.92962 19.9469 10.1167 21.6004 11.7131 22.6797L13.0434 20.4174C11.6722 19.4419 10.7785 17.8299 10.7785 16.0035ZM16.0998 10.6071C18.8833 10.6071 21.1619 12.7657 21.4007 15.5261L24 15.4846C23.8704 13.4506 22.9971 11.6241 21.6463 10.282C20.9504 10.5449 20.1522 10.5034 19.4632 10.1021C18.7673 9.69393 18.3375 9.01593 18.2147 8.26875C17.5393 8.08195 16.8298 7.97817 16.0998 7.97817C14.8377 7.97817 13.6506 8.27566 12.5932 8.80838L13.8621 11.1053C14.5375 10.787 15.3016 10.6071 16.0998 10.6071ZM16.0998 21.3998C15.3016 21.3998 14.5375 21.2199 13.8553 20.9017L12.5864 23.1985C13.6438 23.7313 14.8377 24.0287 16.093 24.0287C16.823 24.0287 17.5325 23.925 18.2079 23.7382C18.3239 22.9979 18.7605 22.313 19.4564 21.9048C20.1454 21.4966 20.9504 21.462 21.6395 21.7249C22.9835 20.3828 23.8636 18.5563 23.9932 16.5223L21.3939 16.4808C21.1619 19.2343 18.8833 21.3998 16.0998 21.3998ZM19.8248 9.45178C20.698 9.96374 21.8101 9.65933 22.3149 8.77378C22.8197 7.88824 22.5196 6.76054 21.6463 6.24859C20.7731 5.73663 19.661 6.04104 19.1562 6.92659C18.6582 7.81213 18.9583 8.93983 19.8248 9.45178Z" fill="white"/>
-                </svg>
+                <svg width="30px" height="30px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M30 16C30 23.728 23.735 30 16 30C8.265 30 2 23.728 2 16C2 8.265 8.265 2 16 2C23.735 2 30 8.265 30 16Z" fill="#155dfc"/><path d="M6.82154 14.1563C5.81185 14.1563 5 14.9865 5 16.0035C5 17.0205 5.81867 17.8507 6.82154 17.8507C7.82442 17.8507 8.64309 17.0205 8.64309 16.0035C8.64309 14.9795 7.82442 14.1563 6.82154 14.1563ZM10.7785 16.0035C10.7785 14.177 11.6722 12.565 13.0434 11.5896L11.7131 9.32725C10.1167 10.4065 8.93645 12.06 8.43842 13.9902C9.01149 14.4676 9.37989 15.194 9.37989 16.0035C9.37989 16.8129 9.01149 17.5393 8.43842 18.0167C8.92962 19.9469 10.1167 21.6004 11.7131 22.6797L13.0434 20.4174C11.6722 19.4419 10.7785 17.8299 10.7785 16.0035ZM16.0998 10.6071C18.8833 10.6071 21.1619 12.7657 21.4007 15.5261L24 15.4846C23.8704 13.4506 22.9971 11.6241 21.6463 10.282C20.9504 10.5449 20.1522 10.5034 19.4632 10.1021C18.7673 9.69393 18.3375 9.01593 18.2147 8.26875C17.5393 8.08195 16.8298 7.97817 16.0998 7.97817C14.8377 7.97817 13.6506 8.27566 12.5932 8.80838L13.8621 11.1053C14.5375 10.787 15.3016 10.6071 16.0998 10.6071ZM16.0998 21.3998C15.3016 21.3998 14.5375 21.2199 13.8553 20.9017L12.5864 23.1985C13.6438 23.7313 14.8377 24.0287 16.093 24.0287C16.823 24.0287 17.5325 23.925 18.2079 23.7382C18.3239 22.9979 18.7605 22.313 19.4564 21.9048C20.1454 21.4966 20.9504 21.462 21.6395 21.7249C22.9835 20.3828 23.8636 18.5563 23.9932 16.5223L21.3939 16.4808C21.1619 19.2343 18.8833 21.3998 16.0998 21.3998ZM19.8248 9.45178C20.698 9.96374 21.8101 9.65933 22.3149 8.77378C22.8197 7.88824 22.5196 6.76054 21.6463 6.24859C20.7731 5.73663 19.661 6.04104 19.1562 6.92659C18.6582 7.81213 18.9583 8.93983 19.8248 9.45178ZM19.8316 22.5482C18.9583 23.0602 18.665 24.1879 19.163 25.0734C19.6679 25.959 20.7799 26.2634 21.6531 25.7514C22.5264 25.2395 22.8197 24.1118 22.3217 23.2262Z" fill="white"/></svg>
               </div>
               <div className="flex-1 space-y-1">
                 <span className="text-[10px] font-black tracking-widest text-blue-600 uppercase italic">License</span>
@@ -390,12 +384,10 @@ export default function PortfolioPage() {
                 </div>
               </div>
             </a>
-
           </div>
         </div>
       </section>
 
-      {/* --- CONTACT SECTION --- */}
       <section id="contact" className="py-12 bg-slate-900 px-6 border-t border-slate-900 text-center">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl text-white font-black uppercase tracking-tighter mb-4">Contact Me</h2>
@@ -425,7 +417,6 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* --- FOOTER --- */}
       <footer className="py-10 bg-slate-900 text-white border-t border-slate-800 text-center">
         <p className="px-48 text-[10px] font-bold uppercase tracking-[0.3em] opacity-50">
           © 2026 Ghani Ramadhani Portofolio
